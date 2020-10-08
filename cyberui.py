@@ -38,6 +38,7 @@ b1 = tk.Button(root, text = '选择文件',command = openimg)
 b1.pack(side = BOTTOM)
 '''
 def resize_scale(img):
+    #将图片按比例缩小
     f1 = 1.0*800/img.shape[0]
     f2 = 1.0*800/img.shape[1]
     factor = min([f1,f2])
@@ -54,7 +55,7 @@ def open_img():
     file_path = askopenfilename()
     img = cv2.imread(file_path)
     img = cyberpunk(img)
-    img = img [...,::-1]
+    img = img [...,::-1] #反转bgr通道
     img_resized = cv2.resize(img,resize_scale(img),interpolation= cv2.INTER_AREA)
     im = Image.fromarray(img_resized)
     img1 = ImageTk.PhotoImage(im)

@@ -13,6 +13,7 @@ root.geometry('1000x700')
 root.title('图片处理')
 global img1 #label图片
 global img #原图的cyberpunk
+global label_img
 
 '''
 class PathyThing:
@@ -54,6 +55,7 @@ def open_img():
     #打开图像并显示
     global img1
     global img
+    global label_img
     OpenFile = tk.Tk()
     OpenFile.withdraw()
     file_path = askopenfilename(title = '选择图片位置', filetypes = [('jpeg类型','*.jpeg'),('jpg类型','*.jpg'),('png类型','*.png')])
@@ -69,10 +71,12 @@ def open_img():
 def save_img():
     #保存图像
     global img
+    global label_img
     SaveFile = tk.Tk()
     SaveFile.withdraw()
     file_savepath = asksaveasfilename(title = '保存赛伯朋克风格图片',filetypes = [('jpeg类型','*.jpeg'),('jpg类型','*.jpg'),('png类型','*.png')])
     cv2.imwrite(str(file_savepath),img)
+    label_img.destroy()
 
 
 b2 = tk.Button(root,text = '保存图像',command = save_img)

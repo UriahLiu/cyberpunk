@@ -77,12 +77,13 @@ def save_img():
     file_savepath = asksaveasfilename(title = '保存赛伯朋克风格图片',filetypes = [('jpeg类型','*.jpeg'),('jpg类型','*.jpg'),('png类型','*.png')])
     cv2.imwrite(str(file_savepath),img)
     label_img.destroy()
+    img = 0
 
 
 b2 = tk.Button(root,text = '保存图像',command = save_img)
-b2.pack(side = BOTTOM)
+b2.place(relx = 0.6, rely = 0.95,anchor = CENTER)
 
 b1 = tk.Button(root,text = '打开图像',command = open_img)
-b1.pack(side = BOTTOM)
+b1.place(relx = 0.4, rely = 0.95,anchor = CENTER)
 
 root.mainloop()

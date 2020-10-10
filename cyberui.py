@@ -11,10 +11,9 @@ from tkinter import *
 from PIL import Image,ImageTk
 from tkinter.filedialog import askopenfilename
 from tkinter.filedialog import asksaveasfilename
-import time
 import cv2
 from cyber import cyberpunk
-import io
+
 
 root = Tk()
 root.geometry('1000x700')

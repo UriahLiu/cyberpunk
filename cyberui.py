@@ -21,7 +21,7 @@ root.geometry('1000x700')
 root.title('图片处理')
 
 global img1 #label图片
-global img = 0 #原图的cyberpunk
+global img #原图的cyberpunk
 global label_img
 
 '''
@@ -62,7 +62,6 @@ def resize_scale(img):
 
 def open_img():
     #打开图像并显示
-    if（）
     global img1
     global img
     global label_img

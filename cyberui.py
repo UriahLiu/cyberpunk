@@ -1,3 +1,11 @@
+'''
+
+@File name: cyberui.py
+@Effect: Create a tk-ui to make a image cyberpunk
+@Author: CSU Uriah Liu
+@Last change date : 2020.10.10
+
+'''
 import tkinter as tk
 from tkinter import *
 from PIL import Image,ImageTk
@@ -11,8 +19,9 @@ import io
 root = Tk()
 root.geometry('1000x700')
 root.title('图片处理')
+
 global img1 #label图片
-global img #原图的cyberpunk
+global img = 0 #原图的cyberpunk
 global label_img
 
 '''
@@ -53,6 +62,7 @@ def resize_scale(img):
 
 def open_img():
     #打开图像并显示
+    if（）
     global img1
     global img
     global label_img
@@ -82,8 +92,8 @@ def save_img():
 
 b2 = tk.Button(root,text = '保存图像',command = save_img)
 b2.place(relx = 0.6, rely = 0.95,anchor = CENTER)
-
 b1 = tk.Button(root,text = '打开图像',command = open_img)
+
 b1.place(relx = 0.4, rely = 0.95,anchor = CENTER)
 
 root.mainloop()

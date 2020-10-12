@@ -17,7 +17,7 @@ from cyber import cyberpunk
 
 root = Tk()
 root.geometry('1000x700')
-root.title('图片处理')
+root.title('Cyberpunk')
 
 global img1 #label图片
 global img #原图的cyberpunk
@@ -66,7 +66,7 @@ def open_img():
     global label_img
     OpenFile = tk.Tk()
     OpenFile.withdraw()
-    file_path = askopenfilename(title = '选择图片位置', filetypes = [('jpeg类型','*.jpeg'),('jpg类型','*.jpg'),('png类型','*.png')])
+    file_path = askopenfilename(title = '选择图片位置', filetypes = [('jpg类型','*.jpg'),('jpeg类型','*.jpeg'),('png类型','*.png')])
     img = cv2.imread(file_path)
     img = cyberpunk(img)
     img_rgb = img[...,::-1] #反转bgr通道
@@ -82,7 +82,7 @@ def save_img():
     global label_img
     SaveFile = tk.Tk()
     SaveFile.withdraw()
-    file_savepath = asksaveasfilename(title = '保存赛伯朋克风格图片',filetypes = [('jpeg类型','*.jpeg'),('jpg类型','*.jpg'),('png类型','*.png')])
+    file_savepath = asksaveasfilename(title = '保存赛伯朋克风格图片',filetypes = [('jpg类型','*.jpg'),('jpeg类型','*.jpeg'),('png类型','*.png')])
     cv2.imwrite(str(file_savepath),img)
     label_img.destroy()
     img = 0

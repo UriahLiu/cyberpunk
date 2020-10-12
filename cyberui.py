@@ -3,7 +3,7 @@
 @File name: cyberui.py
 @Effect: Create a tk-ui to make a image cyberpunk
 @Author: CSU Uriah Liu
-@Last change date : 2020.10.10
+@Last change date : 2020.10.12
 
 '''
 import tkinter as tk
